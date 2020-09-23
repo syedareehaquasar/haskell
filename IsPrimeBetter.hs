@@ -13,3 +13,8 @@ isPrime :: Int -> Bool
 isPrime n | n < 0     = error "Not a prime it's negative or zero"
 isPrime n | n == 1    = False
 isPrime n | otherwise = firstFactor n == n
+
+main = do
+    n <- getLine
+    print $ isPrime (read n :: Int)
+

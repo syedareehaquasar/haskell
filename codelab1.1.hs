@@ -16,7 +16,7 @@ combinations 0 _ = [[]]
 combinations n xs = [ xs !! i : x | i <- [0..(length xs)-1] , x <- combinations (n-1) (drop (i+1) xs) ]
 
 codelab1 :: [Int] -> Int -> Int 
-codelab1 array k = maximum $ trailingInZeros $ [pick_from !! i | i <- [0..length (pick_from) - 1], pick_from <- combinations k array]
+codelab1 array k = maximum $ trailingInZeros $ [pick_from !! i | i <- [0..length (pick_from) - 1], where pick_from = combinations k array]
 
 -- atoi :: String -> Int
 -- atoi s = read s :: Int

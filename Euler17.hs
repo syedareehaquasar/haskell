@@ -7,8 +7,8 @@
  - NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. The use of "and" when writing out numbers is in compliance with British usage.
  -}
 
- ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sizteen", "seventeen", "eighteen", "nineteen"]
- tens = ["", "", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sizteen", "seventeen", "eighteen", "nineteen"]
+tens = ["", "", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"]
 
 numberToWords :: Int -> [Char]
 numberToWords n | n >= 0 && n < 20 = ones !! n
@@ -16,5 +16,5 @@ numberToWords n | n >= 20 && n < 100 = (tens !! (div n 10)) ++ (if (mod n 10 /= 
 numberToWords n | n >= 100 && n < 1000 = (ones !! (div n 100)) ++ "hundred" ++ (if (mod n 100 /= 0) then ("and" ++ numberToWords (mod n 100)) else "")
 numberToWords n | n >= 1000 && n < 1000000 = numberToWords (div n 1000) ++ "thousand" ++ (if (mod n 1000 /= 0) then (numberToWords (div n 1000)) else "")
 
-main = putStrLn (show result)
-result = sum [length (numberToWords n) | n <- [1..1000]]
+main = do
+    print (sum [length (numberToWords n) | n <- [1..1000]])

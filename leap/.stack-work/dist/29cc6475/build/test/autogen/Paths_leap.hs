@@ -29,12 +29,12 @@ version :: Version
 version = Version [1,6,0,10] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\bin"
-libdir     = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\lib\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10-7hTyeUcZeH2LQ6TlmTQKOY-test"
-dynlibdir  = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\lib\\x86_64-windows-ghc-8.8.4"
-datadir    = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\share\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10"
-libexecdir = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\libexec\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10"
-sysconfdir = "C:\\Users\\DELL\\Exercism\\haskell\\leap\\.stack-work\\install\\e498b7ba\\etc"
+bindir     = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\bin"
+libdir     = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\lib\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10-7hTyeUcZeH2LQ6TlmTQKOY-test"
+dynlibdir  = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\lib\\x86_64-windows-ghc-8.8.4"
+datadir    = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\share\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10"
+libexecdir = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\libexec\\x86_64-windows-ghc-8.8.4\\leap-1.6.0.10"
+sysconfdir = "C:\\Users\\DELL\\Exercism\\haskell\\haskell\\leap\\.stack-work\\install\\e498b7ba\\etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "leap_bindir") (\_ -> return bindir)

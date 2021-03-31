@@ -5,20 +5,10 @@ recite start stop | start > stop = []
 reciteDay :: Int -> String
 reciteDay day = "On the " ++ whichDay day ++ " day of Christmas my true love gave to me: " ++ gaveToMe day
 
+whichDayL = ["", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eight", "ninth", "tenth", "eleventh", "twelfth"]
 whichDay :: Int -> String
-whichDay 1  = "first"
-whichDay 2  = "second"
-whichDay 3  = "third"
-whichDay 4  = "fourth"
-whichDay 5  = "fifth"
-whichDay 6  = "sixth"
-whichDay 7  = "seventh"
-whichDay 8  = "eighth"
-whichDay 9  = "ninth"
-whichDay 10 = "tenth"
-whichDay 11 = "eleventh"
-whichDay 12 = "twelfth"
-whichDay _  = ""
+whichDay n | n < 13 =  whichDayL !! n
+           | otherwise = ""
 
 gaveToMe :: Int -> String
 gaveToMe 1  = "a Partridge in a Pear Tree."
